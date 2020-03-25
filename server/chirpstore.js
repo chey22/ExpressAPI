@@ -48,10 +48,10 @@ let deleteChirp = id => {
 
 let writeChirps = () => {
   // does a writeFileSync on chirps.json and the data that it writes is the chirps (must be stringified)
-  return "x", fs.writeFileSync("chirps.json", JSON.stringify(chirps));
+  fs.writeFileSync("chirps.json", JSON.stringify(chirps));
 };
 
-module.exports = {
+export default {
   CreateChirp: createChirp,
   DeleteChirp: deleteChirp,
   GetChirps: getChirps,
